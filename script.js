@@ -85,3 +85,62 @@ function copyTokenAddress() {
         alert('Token address copied to clipboard!');
     }
 }
+
+// Waitlist form handling
+const GOOGLE_SHEETS_URL = 'YOUR_GOOGLE_SHEETS_WEB_APP_URL'; // Add your Google Sheets URL here
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('waitlistForm');
+    const message = document.getElementById('waitlist-message');
+    
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = form.querySelector('input[name="email"]').value;
+            const submitButton = form.querySelector('button[type="submit"]');
+            
+            // Disable button and show loading
+            submitButton.disabled = true;
+            submitButton.textContent = 'Joining...';
+            
+            try {
+                // Send to Google Sheets
+                const response = await fetch(GOOGLE_SHEETS_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                // Show success message
+                message.textContent = '✅ Thanks! You\'re on the waitlist. We\'ll notify you when MUSE launches!';
+                message.style.color = '#00D170';
+                message.style.display = 'block';
+                
+                // Reset form
+                form.reset();
+                
+                // Reset button after delay
+                setTimeout(() => {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Join Waitlist';
+                }, 2000);
+                
+            } catch (error) {
+                // Show error message
+                message.textContent = '❌ Oops! Please try again or email us at info@musemint.io';
+                message.style.color = '#ff4444';
+                message.style.display = 'block';
+                
+                submitButton.disabled = false;
+                submitButton.textContent = 'Join Waitlist';
+            }
+        });
+    }
+});
