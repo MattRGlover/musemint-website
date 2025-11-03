@@ -1,0 +1,30 @@
+{
+  "name": "MUSE",
+  "symbol": "MUSE",
+  "description": "MUSE Token - Earn rewards by listening to music. Trade, hold, and use MUSE tokens across the music ecosystem.",
+  "image": "https://raw.githubusercontent.com/MattRGlover/musemint-website/main/muse-logo.png",
+  "external_url": "https://musemint.io",
+  "attributes": [
+    {
+      "trait_type": "Token Type",
+      "value": "Music Rewards"
+    },
+    {
+      "trait_type": "Network",
+      "value": "Solana"
+    },
+    {
+      "trait_type": "Standard",
+      "value": "SPL Token-22"
+    }
+  ],
+  "properties": {
+    "category": "token",
+    "creators": [
+      {
+        "address": "3sU8a2R7mXTkHKNLdvRT9sTm4DW9vDnewL4fLKTuZi2f",
+        "share": 100
+      }
+    ]
+  }
+}
