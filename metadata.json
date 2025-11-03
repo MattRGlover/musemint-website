@@ -1,0 +1,55 @@
+{
+  "name": "MUSE",
+  "symbol": "MUSE",
+  "description": "Earn rewards for listening to music. MUSE is a Solana-based token that rewards users for their music listening activity. Collect exclusive Artist Cards (NFTs) and turn your passion for music into real value.",
+  "image": "https://musemint.io/images/muse-logo.png",
+  "external_url": "https://musemint.io",
+  "attributes": [
+    {
+      "trait_type": "Token Type",
+      "value": "SPL Token-2022"
+    },
+    {
+      "trait_type": "Network",
+      "value": "Solana"
+    },
+    {
+      "trait_type": "Category",
+      "value": "Music Rewards"
+    },
+    {
+      "trait_type": "Use Case",
+      "value": "Rewards & NFTs"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "https://musemint.io/images/muse-logo.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "fungible",
+    "creators": [
+      {
+        "address": "YOUR_CREATOR_WALLET_ADDRESS",
+        "share": 100
+      }
+    ]
+  },
+  "tokenomics": {
+    "total_supply": "1000000000",
+    "decimals": 9,
+    "distribution": {
+      "user_rewards": "70%",
+      "team": "15%",
+      "liquidity": "10%",
+      "marketing": "5%"
+    }
+  },
+  "social_links": {
+    "website": "https://musemint.io",
+    "twitter": "https://twitter.com/musemusic",
+    "discord": "https://discord.gg/muse"
+  }
+}
