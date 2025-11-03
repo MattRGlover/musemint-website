@@ -37,7 +37,13 @@
                     Turn your music listening into real rewards. Earn points just by enjoying your favorite tracks, then cash out or redeem for perks.
                 </p>
                 <div class="hero-cta">
-                    <a href="#download" class="btn-large btn-primary">Coming Soon</a>
+                    <form class="waitlist-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        <input type="hidden" name="subject" value="New MUSE Waitlist Signup">
+                        <input type="hidden" name="from_name" value="MUSE Waitlist">
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn-large btn-primary">Join Waitlist</button>
+                    </form>
                     <a href="#how-it-works" class="btn-large btn-secondary">Learn More</a>
                 </div>
                 <div class="hero-stats">

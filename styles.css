@@ -161,6 +161,38 @@ body {
     flex-wrap: wrap;
 }
 
+.waitlist-form {
+    display: flex;
+    gap: var(--spacing-sm);
+    max-width: 500px;
+    width: 100%;
+}
+
+.waitlist-form input[type="email"] {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border: 2px solid var(--color-border);
+    border-radius: 50px;
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    outline: none;
+    transition: var(--transition);
+}
+
+.waitlist-form input[type="email"]:focus {
+    border-color: var(--color-primary);
+    background-color: rgba(0, 209, 112, 0.05);
+}
+
+.waitlist-form input[type="email"]::placeholder {
+    color: var(--color-text-secondary);
+}
+
+.waitlist-form button {
+    white-space: nowrap;
+}
+
 .hero-stats {
     display: flex;
     justify-content: center;
